@@ -18,3 +18,23 @@ button {
   font-size: 2rem;
   padding: 0.5rem 1rem;
 }
+
+form {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: 3em;
+}
+
+form > button {
+  background-color: red;
+}
+
+form > button:last-child {
+  background-color: yellow;
+}
+
+form form > div {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: blue;
+}
