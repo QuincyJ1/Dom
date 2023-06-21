@@ -1,3 +1,8 @@
+
+import { renderHeader } from "./header.js";
+
+renderHeader(false); // irgi nera pagrindinis psl, rasai false. 
+
 const goods = [
     { name: 'Morka', price: 1.1, },
     { name: 'Agurkas', price: 3.7, },

@@ -13,7 +13,9 @@ body {
   gap: 1rem;
   align-items: center;
 }
-
+header {
+  font-size: 2rem;
+}
 button {
   font-size: 2rem;
   padding: 0.5rem 1rem;
