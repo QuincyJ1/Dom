@@ -20,33 +20,38 @@ formDOM.addEventListener('submit', (event) => {
 
 
 function renderChessBoard(size = 8) {
+    let blackWhiteHTML = '';
+    let whiteBlackHTML = '';
     let HTML = '';
-   for (let i =0 ; i < size; i++){
-    if (i % 2 === 0) {
-    HTML += `<div class="row">`
-    for (let j = 0; j < size; j++) {
-        if (j % 2 === 0){
-        HTML += '<div class="cell black"></div>';
-        } else {
-            HTML += '<div class="cell"></div>';
-        }
-    }
-                  HTML +=  '</div>';
-    } else {
-         HTML += `<div class="row">`
-        for (let j = 0; j < size; j++) {
-            if (j % 2 === 0){
-                HTML += '<div class="cell"></div>';
-                } else {
-                    HTML += '<div class="cell black"></div>';
-                }
-        }
-                      HTML +=  '</div>';
-    }
-   }
-   boardDOM.innerHTML = HTML;
-}
 
-renderChessBoard(4);
+    for (let j = 0; j < size; j++) {
+        blackWhiteHTML += `<div class="cell ${j % 2 === 0 ? 'black' : ''}"></div>`;
+        whiteBlackHTML += `<div class="cell ${j % 2 === 0 ? '' : 'black'}"></div>`;
+    }
+// sita eilute virsuj yra vienas prie vieno apacioj esanciam if kodui.
+        // if (j % 2 === 0){
+        // HTML += '<div class="cell black"></div>';
+        // } else {
+        //     HTML += '<div class="cell"></div>';
+        // }
+   for (let i = 0 ; i < size; i++){
+HTML += `<div class="row">${i % 2 === 0 ? blackWhiteHTML : whiteBlackHTML}</div>`
+
+ 
+            // if (j % 2 === 0){
+            //     HTML += '<div class="cell"></div>';
+            //     } else {
+            //         HTML += '<div class="cell black"></div>';
+            //     }
+           
+        }
+        boardDOM.innerHTML = HTML;
+}
+   
+    
+  
+
+
+renderChessBoard(8);
 
 //jeigu neduoda funkcijai jokios reiksmes, duoda atsakyma undefined. 
