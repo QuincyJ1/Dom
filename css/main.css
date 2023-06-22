@@ -40,3 +40,31 @@ form form > div {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: blue;
 }
+
+form > input {
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  outline: 10px solid #ccc;
+  width: 75vmin;
+  height: 75vmin; /* sitas matavimo vienetas yra plocio ir aukscio santykis. Jeigu aukstis didesnis, paims auksti, jeigu plotis, paims ploti. Jeigu vmin, tada paims kuris mazesnis.
+  */
+}
+
+.board > .row {
+  display: flex;
+  height: 100%;
+}
+.board > .row > .cell {
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.board > .row > .cell.black {
+  width: 100%;
+  background-color: #333;
+}
