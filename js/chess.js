@@ -35,7 +35,7 @@ function renderChessBoard(size = 8) {
         //     HTML += '<div class="cell"></div>';
         // }
    for (let i = 0 ; i < size; i++){
-HTML += `<div class="row">${i % 2 === 0 ? blackWhiteHTML : whiteBlackHTML}</div>`
+        HTML += `<div class="row">${i % 2 === 0 ? blackWhiteHTML : whiteBlackHTML}</div>`
 
  
             // if (j % 2 === 0){
