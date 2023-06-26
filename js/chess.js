@@ -36,14 +36,12 @@ function renderChessBoard(size = 8) {
         // }
    for (let i = 0 ; i < size; i++){
         HTML += `<div class="row">${i % 2 === 0 ? blackWhiteHTML : whiteBlackHTML}</div>`
-
- 
             // if (j % 2 === 0){
             //     HTML += '<div class="cell"></div>';
             //     } else {
             //         HTML += '<div class="cell black"></div>';
             //     }
-           
+            
         }
         boardDOM.innerHTML = HTML;
 }
